@@ -8,7 +8,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 import com.github.mikephil.charting.charts.BarChart;
+import com.github.mikephil.charting.data.BarData;
+import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
+import com.github.mikephil.charting.interfaces.dataprovider.BarDataProvider;
 import com.jjoe64.graphview.GraphView;
 import com.jjoe64.graphview.series.BarGraphSeries;
 import com.jjoe64.graphview.series.DataPoint;
@@ -42,8 +45,21 @@ public class Main7Activity extends AppCompatActivity {
         barEntries.add(new BarEntry(72f,2));
         barEntries.add(new BarEntry(44f,3));
         barEntries.add(new BarEntry(44f,4));
+        BarDataSet barDataSet = new BarDataSet(barEntries,"Stolenbikes");
 
+        ArrayList<String> dateList = new ArrayList<>();
+        dateList.add("May");
+        dateList.add("June");
+        dateList.add("July");
+        dateList.add("August");
+        dateList.add("September");
+
+        BarData dataBar = new BarData(dateList, barDataSet);
+        barChart.setData(dataBar);
+
+        barChart.setTouchEnabled(true);
+        barChart.setScaleEnabled(true);
+        barChart.setDragEnabled(true);
     }
-    ArrayList<String> dateList = new ArrayList<>();
-    dateList.add
+
 }
