@@ -12,8 +12,8 @@
     tools:context="com.example.onno.testapp.Main7Activity"
     tools:showIn="@layout/activity_main7">
 
-    <com.jjoe64.graphview.GraphView
+    <com.github.mikephil.charting.charts.BarChart
         android:layout_width="match_parent"
-        android:layout_height="300dip"
-        android:id="@+id/graph"/>
+        android:layout_height="300dp"
+        android:id="@+id/barChart"></com.github.mikephil.charting.charts.BarChart>
 </RelativeLayout>

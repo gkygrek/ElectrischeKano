@@ -7,13 +7,18 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
+import com.github.mikephil.charting.charts.BarChart;
+import com.github.mikephil.charting.data.BarEntry;
 import com.jjoe64.graphview.GraphView;
 import com.jjoe64.graphview.series.BarGraphSeries;
 import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.LineGraphSeries;
 
+import java.util.ArrayList;
+
 public class Main7Activity extends AppCompatActivity {
 
+    BarChart barChart;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,15 +34,16 @@ public class Main7Activity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
-        GraphView graph = (GraphView) findViewById(R.id.graph);
-        BarGraphSeries<DataPoint> series = new BarGraphSeries<>(new DataPoint[] {
-                new DataPoint(0, 1),
-                new DataPoint(1, 5),
-                new DataPoint(2, 3),
-                new DataPoint(3, 2),
-                new DataPoint(4, 6)
-        });
-        graph.addSeries(series);
-    }
 
+        barChart = (BarChart)findViewById(R.id.barChart);
+        ArrayList<BarEntry> barEntries = new ArrayList<>();
+        barEntries.add(new BarEntry(44f,0));
+        barEntries.add(new BarEntry(12f,1));
+        barEntries.add(new BarEntry(72f,2));
+        barEntries.add(new BarEntry(44f,3));
+        barEntries.add(new BarEntry(44f,4));
+
+    }
+    ArrayList<String> dateList = new ArrayList<>();
+    dateList.add
 }
