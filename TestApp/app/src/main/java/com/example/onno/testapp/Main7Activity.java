@@ -33,6 +33,7 @@ public class Main7Activity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         BarChart barChart = (BarChart) findViewById(R.id.chart);
+        String buurt = "COOL";
 
         ArrayList<String> labels = new ArrayList<String>();
         labels.add("January");
@@ -57,7 +58,8 @@ public class Main7Activity extends AppCompatActivity {
         Integer[] amounts = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
         for (int i = 0; i < numbers.size() ; i++) {
             Integer maandNr = Integer.parseInt(DataLists.gemiddeldeMaandList.get(numbers.get(i)));
-            amounts[maandNr] = amounts[maandNr] + 1;
+            if (DataLists.buurtList.get(i).contains(buurt))
+                amounts[maandNr] = amounts[maandNr] + 1;
         }
 
         ArrayList<BarEntry> entries = new ArrayList<>();
@@ -65,9 +67,9 @@ public class Main7Activity extends AppCompatActivity {
             entries.add(new BarEntry(amounts[i], i - 1));
 
         BarDataSet dataset = new BarDataSet(entries, "Data");
-
         BarData data = new BarData(labels, dataset);
         barChart.setData(data);
+
     }
 
 }
