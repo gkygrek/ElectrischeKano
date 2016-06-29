@@ -31,19 +31,14 @@ import java.util.List;
             setContentView(R.layout.activity_main2);
             Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
             setSupportActionBar(toolbar);
+
             Button buttonPieChart = (Button) findViewById(R.id.buttonPieChart);
             Button buttonLineChart = (Button) findViewById(R.id.buttonLineChart);
             Button buttonBarChart = (Button) findViewById(R.id.buttonBarChart);
             Button buttonNeighbouurhoudChart = (Button) findViewById(R.id.buttonNeighbouurhoudChart);
+
             context = this.getApplicationContext();
-            FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-            fab.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                            .setAction("Action", null).show();
-                }
-            });
+
             buttonPieChart.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -98,9 +93,9 @@ import java.util.List;
                 }
             }
 
-            for (Integer i = 0; i < DataLists.plaatsList.size(); i++) {
-                System.out.println(DataLists.buurtList.get(i));
-            }
+//            for (Integer i = 0; i < DataLists.plaatsList.size(); i++) {
+//                System.out.println(DataLists.buurtList.get(i));
+//            }
         }
     }
 
