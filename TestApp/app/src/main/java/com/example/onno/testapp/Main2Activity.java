@@ -98,16 +98,16 @@ public class Main2Activity extends AppCompatActivity {
             for (Integer i = 0; i < dataList.size(); i++) {
                 String[] data = dataList.get(i);
                 for (Integer y = 0; y < data.length; y++) {
-                    if (index <= 10)
+                    if (index <= 5)
                         DataLists.trommelLists[index].add(data[y]);
                     index++;
                 }
                 index = 0;
             }
 
-            for (int i = 0; i < DataLists.mutdatumList.size(); i++) {
-                System.out.println(DataLists.mutdatumList.get(i));
-            }
+        }
+        for (int i = 0; i < DataLists.deelgemList.size(); i++) {
+            System.out.println(DataLists.deelgemList.get(i));
         }
     }
 }
