@@ -93,13 +93,13 @@ import java.util.List;
                     index = 0;
                 }
 
-                for (Integer i = 0; i < DataLists.lists.length; i++) {
-                    System.out.println("List sizes: " + DataLists.lists[i].size());
-                }
-            }
-
-            for (Integer i = 0; i < DataLists.plaatsList.size(); i++) {
-                System.out.println(DataLists.buurtList.get(i));
+//                for (Integer i = 0; i < DataLists.lists.length; i++) {
+//                    System.out.println("List sizes: " + DataLists.lists[i].size());
+//                }
+//            }
+//
+//            for (Integer i = 0; i < DataLists.plaatsList.size(); i++) {
+//                System.out.println(DataLists.buurtList.get(i));
             }
         }
     }

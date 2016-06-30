@@ -34,6 +34,7 @@ public class DataLists extends AppCompatActivity {
     public static List<String> typeList = new ArrayList<String>();
     public static List<String> kleurList = new ArrayList<String>();
 
+
     public static List[] lists = {voorvalNummerList, kennisNameList, MKList, MKOmschrijvingList, pogingList,
             districtList, werkgebiedList, plaatsList, buurtList, straatList, beginDagsoortList, beginDatumList,
             beginTijdList, eindDagsoortList, eindDatumList, eindTijd, gemiddeldeJaarList, gemiddeldeMaandList, gemiddeldeDagsoortList,
