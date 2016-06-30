@@ -29,7 +29,6 @@ public class Main8Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main8);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle("Bar chart containers");
         setSupportActionBar(toolbar);
 
         barChart = (BarChart) findViewById(R.id.chart);
