@@ -27,23 +27,23 @@
             android:label="@string/title_activity_main4"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Main2Activity"
-            android:label="@string/title_activity_main2"
+            android:name=".ChartMenu"
+            android:label="ChartMenu"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Main5Activity"
+            android:name=".PieChartMain"
             android:label="PieCharts"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Main6Activity"
-            android:label="@string/title_activity_main4"
+            android:name=".LineChartMain"
+            android:label="LineChart"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Main7Activity"
-            android:label="@string/title_activity_main4"
+            android:name=".BarChartMain"
+            android:label="BarChart"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Main8Activity"
+            android:name=".HoodBarChart"
             android:label="BarChart Containers"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".DataLists"></activity>

@@ -16,10 +16,9 @@ import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.LineGraphSeries;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
-public class Main6Activity extends AppCompatActivity {
+public class LineChartMain extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,49 +27,49 @@ public class Main6Activity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        LineChart lineChart = (LineChart) findViewById(R.id.chart);
+        createLineChart(createEntries(countMonths(getIndexList("fiets"))));
+    }
 
-        ArrayList<String> labels = new ArrayList<String>();
-        labels.add("January");
-        labels.add("February");
-        labels.add("March");
-        labels.add("April");
-        labels.add("May");
-        labels.add("June");
-        labels.add("July");
-        labels.add("August");
-        labels.add("September");
-        labels.add("October");
-        labels.add("November");
-        labels.add("December");
-
+    private List<Integer> getIndexList(String filterWord) {
         List<Integer> numbers = new ArrayList<>();
+        filterWord = filterWord.toLowerCase();
         for (int i = 0; i < DataLists.MKOmschrijvingList.size() ; i++) {
-            if (DataLists.MKOmschrijvingList.get(i).contains("FIETS"))
+            if (DataLists.MKOmschrijvingList.get(i).toLowerCase().contains(filterWord))
                 numbers.add(i);
         }
+        return numbers;
+    }
 
+    private Integer[] countMonths(List<Integer> numbers) {
         Integer[] amounts = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
         for (int i = 0; i < numbers.size() ; i++) {
             Integer maandNr = Integer.parseInt(DataLists.gemiddeldeMaandList.get(numbers.get(i)));
             amounts[maandNr] = amounts[maandNr] + 1;
         }
+        return amounts;
+    }
 
+    private ArrayList<Entry> createEntries(Integer[] amounts) {
         ArrayList<Entry> entries = new ArrayList<>();
         for (int i = 1; i < amounts.length ; i++)
             entries.add(new Entry(amounts[i], i - 1));
+        return entries;
+    }
 
+    private void createLineChart(ArrayList<Entry> entries) {
+        LineChart lineChart = (LineChart) findViewById(R.id.chart);
         LineDataSet dataset = new LineDataSet(entries, "Stolen bicycles per month");
         dataset.setCircleRadius(5);
         dataset.setValueTextSize(10);
         dataset.setDrawFilled(true);
         dataset.setLineWidth(2);
 
+        String[] labels = {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
+
         LineData data = new LineData(labels, dataset);
         lineChart.setData(data);
         lineChart.setDescription("Scroll ->");
         lineChart.setVisibleXRange(3, 3);
-
     }
 
 }
