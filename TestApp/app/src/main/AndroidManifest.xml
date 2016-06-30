@@ -32,7 +32,7 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Main5Activity"
-            android:label="@string/title_activity_main4"
+            android:label="PieCharts"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Main6Activity"
