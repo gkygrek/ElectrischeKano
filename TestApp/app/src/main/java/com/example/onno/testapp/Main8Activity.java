@@ -33,35 +33,28 @@ public class Main8Activity extends AppCompatActivity {
 
         barChart = (BarChart) findViewById(R.id.chart);
         ArrayList<BarEntry> entries = new ArrayList<>();
-        entries.add(new BarEntry(4f, 0));
-        entries.add(new BarEntry(8f, 1));
-        entries.add(new BarEntry(6f, 2));
-        entries.add(new BarEntry(12f, 3));
-        entries.add(new BarEntry(18f, 4));
-        entries.add(new BarEntry(9f, 5));
+        entries.add(new BarEntry(220f, 0));
+        entries.add(new BarEntry(168f, 1));
+        entries.add(new BarEntry(88f, 2));
+        entries.add(new BarEntry(78f, 3));
+        entries.add(new BarEntry(56f, 4));
 
-        BarDataSet dataset = new BarDataSet(entries, "# of Calls");
+
+        BarDataSet dataset = new BarDataSet(entries, "number of bike containers");
 
         ArrayList<String> labels = new ArrayList<String>();
-        labels.add("January");
-        labels.add("February");
-        labels.add("March");
-        labels.add("April");
-        labels.add("May");
-        labels.add("June");
-        labels.add("July");
-        labels.add("August");
-        labels.add("September");
-        labels.add("October");
-        labels.add("November");
-        labels.add("December");
+        labels.add("Noord");
+        labels.add("Delfshaven");
+        labels.add("Centrum");
+        labels.add("Feijenoord");
+        labels.add("Kralingen/Crooswijk");
 
         BarData data = new BarData(labels, dataset);
         barChart.setData(data); // set the data and list of lables into chart
-        barChart.setDescription("A barchart showing the biggest amount of bike containers per neighbourhood.");  // set the description
+        barChart.setDescription("A barchart showing which neighbourhoods have the most bike containers.");  // set the description
         dataset.setColors(ColorTemplate.COLORFUL_COLORS);
-        barChart.animateY(2000);
-        barChart.setVisibleXRange(3,3);
+        barChart.animateY(1500);
+        barChart.setVisibleXRange(2,2);
 
     }
 
