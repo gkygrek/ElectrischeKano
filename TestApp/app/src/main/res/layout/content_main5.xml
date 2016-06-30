@@ -12,6 +12,6 @@
     tools:context="com.example.onno.testapp.Main5Activity"
     tools:showIn="@layout/activity_main5">
 
-    
+
 
 </RelativeLayout>

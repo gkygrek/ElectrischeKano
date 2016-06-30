@@ -45,17 +45,37 @@ public class Main7Activity extends AppCompatActivity {
         barEntries.add(new BarEntry(72f,2));
         barEntries.add(new BarEntry(44f,3));
         barEntries.add(new BarEntry(44f,4));
-        BarDataSet barDataSet = new BarDataSet(barEntries,"Stolenbikes");
 
-        ArrayList<String> dateList = new ArrayList<>();
-        dateList.add("May");
-        dateList.add("June");
-        dateList.add("July");
-        dateList.add("August");
-        dateList.add("September");
+        barChart = (BarChart)findViewById(R.id.barChart);
+        ArrayList<BarEntry> barEntry2 = new ArrayList<>();
+        barEntry2.add(new BarEntry(20f,0));
+        barEntry2.add(new BarEntry(20f,1));
+        barEntry2.add(new BarEntry(20f,2));
+        barEntry2.add(new BarEntry(20f,3));
+        barEntry2.add(new BarEntry(20f,4));
 
-        BarData dataBar = new BarData(dateList, barDataSet);
-        barChart.setData(dataBar);
+        BarDataSet set1 = new BarDataSet(barEntries,"Stolen bikes");
+        set1.setColor(-65536);
+        BarDataSet set2 = new BarDataSet(barEntry2,"Bike Trommels");
+        set2.setColor(-16711012);
+
+        ArrayList<String> hoodList = new ArrayList<>();
+        hoodList.add("Delfshaven");
+        hoodList.add("Rotje");
+        hoodList.add("Knor");
+        hoodList.add("Liskwart");
+        hoodList.add("Centrum");
+
+        ArrayList<BarDataSet> dataSets = new ArrayList<>();
+        dataSets.add(set1);
+        dataSets.add(set2);
+
+
+        BarData data = new BarData(hoodList, set2);
+        data.addDataSet(set1);
+        barChart.setData(data);
+        barChart.invalidate();
+        barChart.setDrawBarShadow(true);
 
         barChart.setTouchEnabled(true);
         barChart.setScaleEnabled(true);
