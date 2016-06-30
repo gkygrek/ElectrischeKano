@@ -17,7 +17,7 @@ public class DataLists extends AppCompatActivity {
     public static List<String> werkgebiedList = new ArrayList<String>();
     public static List<String> plaatsList = new ArrayList<String>();
     public static List<String> buurtList = new ArrayList<String>();
-    public static List<String> straatList = new ArrayList<String>();
+    public static List<String> straatFietsList = new ArrayList<String>();
     public static List<String> beginDagsoortList = new ArrayList<String>();
     public static List<String> beginDatumList = new ArrayList<String>();
     public static List<String> beginTijdList = new ArrayList<String>();
@@ -34,9 +34,21 @@ public class DataLists extends AppCompatActivity {
     public static List<String> typeList = new ArrayList<String>();
     public static List<String> kleurList = new ArrayList<String>();
 
-    public static List[] lists = {voorvalNummerList, kennisNameList, MKList, MKOmschrijvingList, pogingList,
-            districtList, werkgebiedList, plaatsList, buurtList, straatList, beginDagsoortList, beginDatumList,
+    public static List[] diefstalLists = {voorvalNummerList, kennisNameList, MKList, MKOmschrijvingList, pogingList,
+            districtList, werkgebiedList, plaatsList, buurtList, straatFietsList, beginDagsoortList, beginDatumList,
             beginTijdList, eindDagsoortList, eindDatumList, eindTijd, gemiddeldeJaarList, gemiddeldeMaandList, gemiddeldeDagsoortList,
             gemiddeldeDagdeelList, TrefwoordList, objectList, merkList, typeList, kleurList
+    };
+
+    public static List<String> inventarisNrList = new ArrayList<String>();
+    public static List<String> invSrtList = new ArrayList<String>();
+    public static List<String> omschrijvingList = new ArrayList<String>();
+    public static List<String> straatTrommelList = new ArrayList<String>();
+    public static List<String> thvList = new ArrayList<String>();
+    public static List<String> deelgemList = new ArrayList<String>();
+    public static List<String> datumList = new ArrayList<String>();
+
+
+    public static List[] trommelLists = {inventarisNrList, invSrtList, omschrijvingList, straatTrommelList, thvList, deelgemList, datumList
     };
 }
