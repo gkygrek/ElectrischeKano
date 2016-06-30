@@ -46,9 +46,10 @@ public class DataLists extends AppCompatActivity {
     public static List<String> straatTrommelList = new ArrayList<String>();
     public static List<String> thvList = new ArrayList<String>();
     public static List<String> deelgemList = new ArrayList<String>();
+    public static List<String> datumList = new ArrayList<String>();
 
 
-    public static List[] trommelLists = {inventarisNrList, invSrtList, omschrijvingList, straatTrommelList, thvList, deelgemList
+    public static List[] trommelLists = {inventarisNrList, invSrtList, omschrijvingList, straatTrommelList, thvList, deelgemList, datumList
     };
 
 }

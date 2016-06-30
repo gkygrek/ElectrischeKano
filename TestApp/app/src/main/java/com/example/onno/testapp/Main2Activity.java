@@ -83,10 +83,6 @@ public class Main2Activity extends AppCompatActivity {
                 }
                 index = 0;
             }
-
-            for (Integer i = 0; i < DataLists.diefstalLists.length; i++) {
-                System.out.println("List sizes: " + DataLists.diefstalLists[i].size());
-            }
         }
 
         if (DataLists.inventarisNrList.isEmpty()) {
@@ -98,16 +94,12 @@ public class Main2Activity extends AppCompatActivity {
             for (Integer i = 0; i < dataList.size(); i++) {
                 String[] data = dataList.get(i);
                 for (Integer y = 0; y < data.length; y++) {
-                    if (index <= 5)
+                    if (index <= 6)
                         DataLists.trommelLists[index].add(data[y]);
                     index++;
                 }
                 index = 0;
             }
-
-        }
-        for (int i = 0; i < DataLists.deelgemList.size(); i++) {
-            System.out.println(DataLists.deelgemList.get(i));
         }
     }
 }
