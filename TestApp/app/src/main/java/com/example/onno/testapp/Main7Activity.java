@@ -1,5 +1,6 @@
 package com.example.onno.testapp;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -8,9 +9,13 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 import com.github.mikephil.charting.charts.BarChart;
+import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
+import com.github.mikephil.charting.data.Entry;
+import com.github.mikephil.charting.data.LineData;
+import com.github.mikephil.charting.data.LineDataSet;
 import com.github.mikephil.charting.utils.ColorTemplate;
 import com.jjoe64.graphview.GraphView;
 import com.jjoe64.graphview.series.BarGraphSeries;
@@ -69,7 +74,6 @@ public class Main7Activity extends AppCompatActivity {
                 String datum = DataLists.datumList.get(i);
                 datum = datum.substring(datum.indexOf("-") + 1);
                 datum = datum.substring(0, datum.indexOf("-"));
-
                 Integer maandNr = Integer.parseInt(datum);
                 amounts2[maandNr] = amounts2[maandNr] + 1;
             }

@@ -118,10 +118,19 @@ public class Main6Activity extends AppCompatActivity {
 
 
 
+<<<<<<< HEAD
                 DataPoint[] data = new DataPoint[yAs.size()];
                 for (int k = 0; k < yAs.size(); k++) {
                     data[k] = new DataPoint(yAs.get(k), xAs.get(k));
                 }
+=======
+        LineData data = new LineData(labels, dataset);
+        lineChart.setData(data);
+        lineChart.setDescription("Scroll ->");
+        lineChart.setVisibleXRange(3, 3);
+
+    }
+>>>>>>> refs/remotes/origin/master
 
                 GraphView graph = (GraphView) findViewById(R.id.graph);
                 LineGraphSeries<DataPoint> series = new LineGraphSeries<>(data
