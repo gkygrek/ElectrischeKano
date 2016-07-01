@@ -34,8 +34,14 @@ public class DataLists extends AppCompatActivity {
     public static List<String> typeList = new ArrayList<String>();
     public static List<String> kleurList = new ArrayList<String>();
 
+<<<<<<< HEAD
     public static List[] diefstalLists = {voorvalNummerList, kennisNameList, MKList, MKOmschrijvingList, pogingList,
             districtList, werkgebiedList, plaatsList, buurtList, straatFietsList, beginDagsoortList, beginDatumList,
+=======
+
+    public static List[] lists = {voorvalNummerList, kennisNameList, MKList, MKOmschrijvingList, pogingList,
+            districtList, werkgebiedList, plaatsList, buurtList, straatList, beginDagsoortList, beginDatumList,
+>>>>>>> refs/remotes/origin/master
             beginTijdList, eindDagsoortList, eindDatumList, eindTijd, gemiddeldeJaarList, gemiddeldeMaandList, gemiddeldeDagsoortList,
             gemiddeldeDagdeelList, TrefwoordList, objectList, merkList, typeList, kleurList
     };

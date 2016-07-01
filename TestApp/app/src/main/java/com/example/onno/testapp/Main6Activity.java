@@ -28,6 +28,7 @@ public class Main6Activity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+<<<<<<< HEAD
         LineChart lineChart = (LineChart) findViewById(R.id.chart);
 
         ArrayList<String> labels = new ArrayList<String>();
@@ -66,11 +67,123 @@ public class Main6Activity extends AppCompatActivity {
         dataset.setDrawFilled(true);
         dataset.setLineWidth(2);
 
+=======
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+            }
+        });
+
+        int x = 0;
+        String buurt = "NOORD";
+        int y = 0;
+        int d = 1;
+        boolean next = false;
+        List<Integer> yAs = new ArrayList<>();
+        List<Integer> xAs = new ArrayList<>();
+
+                        while (d < 13)
+                        {
+                            for (int g = 1; g < DataLists.gemiddeldeMaandList.size(); g++) {
+                                if (DataLists.buurtList.get(g).contains(buurt)) {
+                                    System.out.println(2);
+                                    if (DataLists.gemiddeldeJaarList.get(g).contains("2011")) {
+                                        if (Integer.parseInt(DataLists.gemiddeldeMaandList.get(g)) == d) {
+                                            System.out.println(4);
+                                            x = x + 1;
+                                        }
+
+                                    }
+
+
+                                }
+                            }
+                            y = d;
+                            yAs.add(y);
+                            xAs.add(x);
+                            d = d+1;
+                            x = 0;
+
+
+                        }
+        d = 0;
+        while (d < 13)
+        {
+            for (int g = 1; g < DataLists.gemiddeldeMaandList.size(); g++) {
+                if (DataLists.buurtList.get(g).contains(buurt)) {
+                    System.out.println(2);
+                    if (DataLists.gemiddeldeJaarList.get(g).contains("2012")) {
+                        if (Integer.parseInt(DataLists.gemiddeldeMaandList.get(g)) == d) {
+                            System.out.println(4);
+                            x = x + 1;
+                        }
+
+                    }
+
+
+                }
+            }
+            y = d + 12;
+            yAs.add(y);
+            xAs.add(x);
+            d = d+1;
+            x = 0;
+
+
+        }
+        d = 0;
+        while (d < 13)
+        {
+            for (int g = 1; g < DataLists.gemiddeldeMaandList.size(); g++) {
+                if (DataLists.buurtList.get(g).contains(buurt)) {
+                    System.out.println(2);
+                    if (DataLists.gemiddeldeJaarList.get(g).contains("2013")) {
+                        if (Integer.parseInt(DataLists.gemiddeldeMaandList.get(g)) == d) {
+                            System.out.println(4);
+                            x = x + 1;
+                        }
+
+                    }
+
+
+                }
+            }
+            y = d + 24;
+            yAs.add(y);
+            xAs.add(x);
+            d = d+1;
+            x = 0;
+
+
+        }
+
+
+
+<<<<<<< HEAD
+                DataPoint[] data = new DataPoint[yAs.size()];
+                for (int k = 0; k < yAs.size(); k++) {
+                    data[k] = new DataPoint(yAs.get(k), xAs.get(k));
+                }
+=======
+>>>>>>> refs/remotes/origin/master
         LineData data = new LineData(labels, dataset);
         lineChart.setData(data);
         lineChart.setDescription("Scroll ->");
         lineChart.setVisibleXRange(3, 3);
 
     }
+>>>>>>> refs/remotes/origin/master
 
-}
+                GraphView graph = (GraphView) findViewById(R.id.graph);
+                LineGraphSeries<DataPoint> series = new LineGraphSeries<>(data
+
+
+                );
+                graph.addSeries(series);
+
+            }
+
+        }

@@ -20,31 +20,77 @@
         </activity>
         <activity
             android:name=".Main3Activity"
-            android:label="@string/title_activity_main3"
+            android:label="Location"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Main4Activity"
             android:label="@string/title_activity_main4"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
+<<<<<<< HEAD
+            android:name=".ChartMenu"
+            android:label="ChartMenu"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".PieChartMain"
+            android:label="PieCharts"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".LineChartMain"
+            android:label="LineChart"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".BarChartMain"
+            android:label="BarChart"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".HoodBarChart"
+            android:label="BarChart Containers"
+=======
+<<<<<<< HEAD
+            android:name=".ChartMenu"
+            android:label="ChartMenu"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".PieChartMain"
+            android:label="PieCharts"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".LineChartMain"
+            android:label="LineChart"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".BarChartMain"
+            android:label="BarChart"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".HoodBarChart"
+            android:label="BarChart Containers"
+=======
             android:name=".Main2Activity"
-            android:label="@string/title_activity_main2"
+            android:label="Charts"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Main5Activity"
-            android:label="@string/title_activity_main4"
+            android:label="Pie Charts"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Main6Activity"
-            android:label="@string/title_activity_main4"
+            android:label="Line Chart "
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Main7Activity"
-            android:label="@string/title_activity_main4"
+            android:label="Bar Chart"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Main8Activity"
-            android:label="@string/title_activity_main4"
+            android:label="Bar Chart Containers"
+>>>>>>> origin/master
+>>>>>>> origin/master
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Main9Activity"
+            android:label="BarChart Containers"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".DataLists"></activity>
     </application>

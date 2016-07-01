@@ -9,7 +9,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.example.onno.testapp.Main2Activity"
+    tools:context=".ChartMenu"
     tools:showIn="@layout/activity_main2"
     android:background="@drawable/backgroundapp">
 
@@ -46,10 +46,20 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="NeighbourhoudChart"
+        android:text="NeighbourhoodChart"
         android:id="@+id/buttonNeighbouurhoudChart"
         android:minWidth="165dp"
         android:textSize="12dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BrandPieChart"
+        android:id="@+id/buttonBrandPieChart"
+        android:layout_above="@+id/buttonLineChart"
+        android:layout_alignEnd="@+id/buttonLineChart"
+        android:minWidth="165dp"
+        android:textSize="12dp" />
 </RelativeLayout>
