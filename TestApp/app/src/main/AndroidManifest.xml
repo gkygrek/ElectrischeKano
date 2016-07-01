@@ -47,6 +47,26 @@
             android:name=".HoodBarChart"
             android:label="BarChart Containers"
 =======
+<<<<<<< HEAD
+            android:name=".ChartMenu"
+            android:label="ChartMenu"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".PieChartMain"
+            android:label="PieCharts"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".LineChartMain"
+            android:label="LineChart"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".BarChartMain"
+            android:label="BarChart"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".HoodBarChart"
+            android:label="BarChart Containers"
+=======
             android:name=".Main2Activity"
             android:label="Charts"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -65,6 +85,7 @@
         <activity
             android:name=".Main8Activity"
             android:label="Bar Chart Containers"
+>>>>>>> origin/master
 >>>>>>> origin/master
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".DataLists"></activity>

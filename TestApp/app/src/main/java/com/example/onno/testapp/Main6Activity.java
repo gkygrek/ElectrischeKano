@@ -16,6 +16,7 @@ import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.LineGraphSeries;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class Main6Activity extends AppCompatActivity {
@@ -69,6 +70,7 @@ public class Main6Activity extends AppCompatActivity {
         lineChart.setData(data);
         lineChart.setDescription("Scroll ->");
         lineChart.setVisibleXRange(3, 3);
+
     }
 
 }

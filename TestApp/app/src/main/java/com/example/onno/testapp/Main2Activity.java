@@ -18,7 +18,6 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class Main2Activity extends AppCompatActivity {
     Context context;
 
