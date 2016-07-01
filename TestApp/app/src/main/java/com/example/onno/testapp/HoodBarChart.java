@@ -19,11 +19,6 @@ import java.util.Random;
 
 public class HoodBarChart extends AppCompatActivity {
 
-
-    BarChart barChart;
-    ArrayList<String> dates;
-    Random random;
-    ArrayList<BarEntry> barEntries;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,7 +26,7 @@ public class HoodBarChart extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        barChart = (BarChart) findViewById(R.id.chart);
+        BarChart barChart = (BarChart) findViewById(R.id.chart);
         ArrayList<BarEntry> entries = new ArrayList<>();
         entries.add(new BarEntry(220f, 0));
         entries.add(new BarEntry(168f, 1));

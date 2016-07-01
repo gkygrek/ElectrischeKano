@@ -66,29 +66,17 @@
         <activity
             android:name=".HoodBarChart"
             android:label="BarChart Containers"
-=======
+        >>>>>> origin/master
+>>>>
+
+> origin/master
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".DataLists"></activity>
+    </application><![CDATA[=======
             android:name=".Main2Activity"
             android:label="Charts"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".Main5Activity"
-            android:label="Pie Charts"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".Main6Activity"
-            android:label="Line Chart "
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".Main7Activity"
-            android:label="Bar Chart"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".Main8Activity"
-            android:label="Bar Chart Containers"
->>>>>>> origin/master
->>>>>>> origin/master
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".DataLists"></activity>
-    </application>
+        ]]>x
 
-</manifest>
+
+/manifest>
