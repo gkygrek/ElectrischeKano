@@ -33,6 +33,7 @@ public class Main2Activity extends AppCompatActivity {
         Button buttonLineChart = (Button) findViewById(R.id.buttonLineChart);
         Button buttonBarChart = (Button) findViewById(R.id.buttonBarChart);
         Button buttonNeighbourhoudChart = (Button) findViewById(R.id.buttonNeighbouurhoudChart);
+        Button buttonBrandPieChart = (Button) findViewById(R.id.buttonBrandPieChart);
 
         context = this.getApplicationContext();
 
@@ -64,6 +65,14 @@ public class Main2Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, Main8Activity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(intent);
+            }
+        });
+        buttonBrandPieChart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, Main9Activity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(intent);
             }

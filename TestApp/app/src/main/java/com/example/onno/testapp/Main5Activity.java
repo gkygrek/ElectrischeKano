@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.components.Legend;
+import com.github.mikephil.charting.data.DataSet;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
@@ -20,14 +21,18 @@ import com.github.mikephil.charting.highlight.Highlight;
 import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
 import com.github.mikephil.charting.utils.ColorTemplate;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Main5Activity extends AppCompatActivity {
 
     private RelativeLayout mainLayout;
     private PieChart mChart;
-    private float[] yData = {5, 10, 15, 30, 40};
-    private String[] xData = {"Sony", "Huawei", "LG", "Apple", "Samsung"};
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,11 +41,51 @@ public class Main5Activity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        ArrayList<Float> yData = new ArrayList();
+        Set set = new HashSet(DataLists.kleurList);
+        ArrayList<String> uniqueList = new ArrayList(set);
+        for (int i = 0; i < uniqueList.size(); i++)
+        {
+            uniqueList.set(i, uniqueList.get(i).replaceAll(" ", ""));
+
+        }
+        for (int i = 0; i < uniqueList.size(); i++)
+        {
+            System.out.println(uniqueList.get(i));
+            if (uniqueList.get(i).length() < 3)
+            {
+                System.out.println(uniqueList.get(i));
+                uniqueList.remove(uniqueList.get(i));
+            }
+
+        }
+        Float x = 0F;
+
+        String[] xData = new String[uniqueList.size()];
+        xData = uniqueList.toArray(xData);
+        final String[] legendValues = xData;
+
+        for (int g = 0; g < uniqueList.size(); g++)
+        {
+            for (int i = 1; i < DataLists.kleurList.size(); i++)
+            {
+                if (uniqueList.get(g).equals(DataLists.kleurList.get(i)))
+                {
+                    x = x + 1;
+                }
+            }
+            yData.add(x);
+            x = 0F;
+        }
+
+        Float[] pieChartValues = new Float[yData.size()];
+        pieChartValues = yData.toArray(pieChartValues);
+
         mainLayout = (RelativeLayout) findViewById(R.id.mainLayout);
         mChart = (PieChart) findViewById(R.id.chart);
 
         mChart.setUsePercentValues(true);
-        mChart.setDescription("SmartPhones Market Share");
+        mChart.setDescription("Stolen bikes sorted by color");
 
         mChart.setDrawHoleEnabled(true);
         mChart.setHoleRadius(7);
@@ -59,7 +104,8 @@ public class Main5Activity extends AppCompatActivity {
                     return;
 
                 Toast.makeText(Main5Activity.this,
-                        xData[e.getXIndex()] + " = " + e.getVal() + "%", Toast.LENGTH_SHORT).show();
+                        //legendValues[e.getXIndex()] + " = " + e.getVal() + "%", Toast.LENGTH_SHORT).show();
+                        legendValues[e.getXIndex()] + " = " + e.getVal() + "= total amount", Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -68,7 +114,7 @@ public class Main5Activity extends AppCompatActivity {
             }
         });
 
-        addData();
+        addData(pieChartValues, legendValues);
 
         Legend l = mChart.getLegend();
         l.setPosition(Legend.LegendPosition.RIGHT_OF_CHART);
@@ -76,16 +122,16 @@ public class Main5Activity extends AppCompatActivity {
         l.setYEntrySpace(5);
     }
 
-    private void addData(){
+    private void addData(Float[] pieChartValues,String[] legendValues){
         ArrayList<Entry> yVals1 = new ArrayList<Entry>();
 
-        for (int i = 0; i < yData.length; i++)
-            yVals1.add(new Entry(yData[i], i));
+        for (int i = 0; i < pieChartValues.length; i++)
+            yVals1.add(new Entry(pieChartValues[i], i));
 
         ArrayList<String> xVals = new ArrayList<String>();
 
-        for (int i = 0; i < xData.length; i++)
-            xVals.add(xData[i]);
+        for (int i = 0; i < legendValues.length; i++)
+            xVals.add(legendValues[i]);
 
         PieDataSet dataSet = new PieDataSet(yVals1, "Market Share");
         dataSet.setSliceSpace(3);
@@ -113,7 +159,7 @@ public class Main5Activity extends AppCompatActivity {
 
         PieData data = new PieData(xVals, dataSet);
         data.setValueFormatter(new PercentFormatter());
-        data.setValueTextSize(11f);
+        data.setValueTextSize(0f);
         data.setValueTextColor(Color.GRAY);
 
         mChart.setData(data);
