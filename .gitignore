@@ -92,3 +92,5 @@ captures/
 Status API Training Shop Blog About
 © 2016 GitHub, Inc. Terms Privacy Security Contact 
 >>>>>>> cfcf146c9a0a35958321e7b12031061a1d38ce52
+TestApp/app/src/main/AndroidManifest.xml
+*.java
