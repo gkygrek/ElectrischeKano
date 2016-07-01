@@ -88,6 +88,10 @@
 >>>>>>> origin/master
 >>>>>>> origin/master
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Main9Activity"
+            android:label="BarChart Containers"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".DataLists"></activity>
     </application>
 
