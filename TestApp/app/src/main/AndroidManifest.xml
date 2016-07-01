@@ -92,7 +92,11 @@
             android:name=".Main9Activity"
             android:label="BarChart Containers"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".DataLists"></activity>
+        <activity
+            android:name=".Main9Activity"
+            android:label="@string/title_activity_main9"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".DataLists" />
     </application>
 
 </manifest>
